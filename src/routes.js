@@ -2,7 +2,9 @@ import React from "react";
 
 // Admin Imports
 import MainDashboard from "views/admin/default";
+import { MdQuestionAnswer } from "react-icons/md";
 import NFTMarketplace from "views/admin/marketplace";
+import Faq from "views/admin/faq";
 import Profile from "views/admin/profile";
 import DataTables from "views/admin/tables";
 import RTLDefault from "views/rtl/default";
@@ -26,6 +28,15 @@ const routes = [
     path: "default",
     icon: <MdHome className="h-6 w-6" />,
     component: <MainDashboard />,
+  },
+
+  {
+    name: "FAQ",
+    layout: "/admin",
+    path: "faq",
+    icon: <MdQuestionAnswer className="h-6 w-6" />,
+    component: <Faq />,
+    secondary: true,
   },
   {
     name: "NFT Marketplace",
