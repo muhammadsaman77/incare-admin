@@ -1,10 +1,11 @@
 import React from "react";
-
+import { GiVideoConference } from "react-icons/gi";
 // Admin Imports
 import MainDashboard from "views/admin/default";
 import { MdQuestionAnswer } from "react-icons/md";
 import NFTMarketplace from "views/admin/marketplace";
 import Faq from "views/admin/faq";
+import Seminar from "views/admin/seminar";
 import Profile from "views/admin/profile";
 import DataTables from "views/admin/tables";
 import RTLDefault from "views/rtl/default";
@@ -33,9 +34,17 @@ const routes = [
   {
     name: "FAQ",
     layout: "/admin",
-    path: "faq",
+    path: "faqs",
     icon: <MdQuestionAnswer className="h-6 w-6" />,
     component: <Faq />,
+    secondary: true,
+  },
+  {
+    name: "Seminars",
+    layout: "/admin",
+    path: "seminars",
+    icon: <GiVideoConference className="h-6 w-6" />,
+    component: <Seminar />,
     secondary: true,
   },
   {
